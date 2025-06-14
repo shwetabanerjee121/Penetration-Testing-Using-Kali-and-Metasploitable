@@ -15,4 +15,4 @@
 
 (bash)
 ping <target-ip>
-For my project: ping 192.168.56.102
+For my project: ping 192.168.xxx.xxx
